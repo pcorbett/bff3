@@ -52,3 +52,23 @@ $vertical-horizontal-nav: 721px;
 //////////////////////////////
 // This partial will write the Style Prototype page specific styling. If you would like to write your own, remove it and please do so.
 @import ".prototype/prototype";
+
+.images li {
+  border: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius:0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  margin-bottom: 15px;
+}
+
+#prototype-header {
+  background-color: white;
+}
+
+#prototype-header {
+  h1 {
+    color: black;
+  }
+}

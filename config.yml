@@ -2,7 +2,7 @@
 ## Client Information
 #########################
 client:
-  name: msrowe
+  name: Mommys Event BFF
   homepage: mommyseventbff.com
 
 #########################
@@ -25,16 +25,16 @@ prototype:
     # Typekit Kit ID (uses advanced loading method)
     typekit: false
     # Copy in the the families from inside the brackets [] from the JavaScript tab. Be sure to wrap it in "double quotes".
-    googleFonts: false
+    googleFonts: "'Istok+Web:400,700,400italic,700italic:latin', 'Gudea:400,700,400italic:latin', 'Metrophobic::latin', 'Maven+Pro:400,700:latin', 'Lato:100,300,400,700:latin', 'Playfair+Display:400,700:latin', 'Poiret+One::latin', 'Trocchi::latin', 'Raleway:400,100,700:latin'"
 
 ## Main Navigation Sections
 sections:
   Home: ''
-  Style Tile: style-tile
-  Elements: elements
-  Typography: typography
-  Components: components
-  Colors: colors
+  Style: style-tile
+  Element: elements
+  Typog: typography
+  Component: components
+  Color: colors
 
 ## Style Tile Options
 styleTile:
@@ -83,6 +83,8 @@ colors:
     - secondary
     - tertiary
     - quadrary
+    - fifth
+    - sixth
   # The number of shades each color has
   shades: 6
 
@@ -98,7 +100,7 @@ server:
 export:
   path: export
   # If deploying somewhere (like GitHub Pages) where your files will not be located at the root directory, this will be the prefix that gets appended to assets run through image-url, style-url, script-url, and component-url
-  assetPrefix: page
+  assetPrefix: bff3
 
 #########################
 ## Compass Options
@@ -108,6 +110,7 @@ compass:
   # If you would like to add more Compass extensions, be sure to include the extensions in your Gemfile and re-run `bundle install`
   extensions:
     - style-prototypes
+    - sassy-buttons
 
 #########################
 ## Versioning

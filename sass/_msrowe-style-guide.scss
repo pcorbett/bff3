@@ -20,3 +20,122 @@ $legacy-support-for-mozilla: false !default;
 // Import Global
 //////////////////////////////
 @import "global/base";
+@import "sassy-buttons";
+//////////////////////////////
+// Variables
+//////////////////////////////
+$fheader2: 'Poiret One', serif;
+$fheader3: 'Trocchi', serif;
+$fheader5: 'Lato', serif;
+$fbody2: 'Istok Web', sans-serif;
+
+//////////////////////////////
+// Colors
+//////////////////////////////
+$melon: #DE534E;
+$green: #169141;
+$blue: #2B72AB;
+$brown: #5E3F3E;
+//////////////////////////////
+// Base
+//////////////////////////////
+h1, h2, h3 {
+  font-family: $fheader3;
+}
+
+h1 {
+  &.client-name {
+    font-family: $fheader2;
+  }
+}
+h2 {
+  font-size: 3em;
+  border-bottom: 1px dotted #cccccc;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+body {
+  font-family: $fbody2;
+  color: #333333;  
+}
+
+a {
+  color: $melon;
+}
+
+.images.group li img {
+  -webkit-box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow:    4px 4px 5px rgba(50, 50, 50, 0.5);
+  box-shadow:         4px 4px 5px rgba(50, 50, 50, 0.5);
+}
+
+.messages {
+  &.error { 
+    color: $melon;
+  }
+  &.status {
+    color: $green;
+  }
+  &.warning {
+    color: $brown;
+  }
+}
+
+.call-to-action {
+  @include sassy-button("glass", 10px, 19px, $melon)
+}
+
+.big-button {
+  @include sassy-button("glass", 20px, 29px, $blue);
+  &.red {  @include sassy-button("glass", 20px, 29px, $melon);
+  }
+}
+
+.pager {
+  li { 
+    display: inline;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+table {
+  thead {
+    background-color: $blue;
+    color: white;
+    padding: 5px;
+  }
+  td {
+    padding: 5px;
+    background-color: nth($black, 6);
+  }
+}
+
+code {
+  &.group {
+    pre { 
+      background-color: nth($black, 4);
+    }
+  }
+}
+
+#prototype-nav {
+  text-align: center;
+  padding: 10px;
+  background-color: nth($black, 1);
+  color: white;
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: nth($black,5);
+    font-size: 1em;
+    letter-spacing: .15em;
+    font-family: $fheader5;
+    font-weight: 200;
+    margin-right: 15px;
+  }
+}

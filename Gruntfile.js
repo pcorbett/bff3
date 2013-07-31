@@ -140,7 +140,7 @@ module.exports = function (grunt) {
           ext: '.html'
         }],
         options: {
-          partialsGlob: partialsDir + '/*.html',
+          partialsGlob: [partialsDir + '/{,**/}*.html', partialsDir + '/{,**/}*.md'],         
           templates: templatesDir,
           handlebarsHelpers: helpers,
           userConfig: userConfig,
